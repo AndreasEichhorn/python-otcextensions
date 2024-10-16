@@ -39,6 +39,8 @@ class Image(resource.Resource):
     image_tags = resource.Body('image_tags', type=list)
     data_images = resource.Body('data_images', type=list)
     job_id = resource.Body('job_id')
+    hw_firmware_type = resource.Body('hw_firmware_type')
+
 
     def create(self, session, prepend_key=False, base_path=None):
         # Overriden here to override prepend_key default value
